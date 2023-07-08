@@ -1,0 +1,195 @@
+@fontFamily: 'Inter', sans-serif;
+
+@border-radius: 6px;
+
+@main: #707BA0; //#6e7dae;
+
+@white: #fff;
+@black: #000;
+@dark: #030625; //#0d1a2f;
+
+/* BG/Dark */
+@background: @dark;
+@darkOffsetBottom: linear-gradient(
+  360deg,
+  @dark 15%,
+  rgba(13, 26, 47, 0) 100%
+);
+@darkOffsetTop: linear-gradient(360deg, @dark 15%, rgba(13, 26, 47, 0) 100%);
+@blackDropShadow: -20px 20px 55px rgba(107, 107, 107, 0.2);
+
+/* ----  Neutral -------*/
+@Neutral100: #f2f3f8; //#F2F3F8
+@Neutral140: #FAFAFC; //#F2F3F8
+@Neutral200: #E2E6F3; //#D8DCE9
+@Neutral300: #C5CCE3; //#BDC4DB
+@Neutral400: #A1AAC8; //#A3ADCC
+@Neutral500: #707BA0; //#6E7DAE
+@Neutral600: #434C69; //#57689E
+@Neutral700: #2B3450; //#495683
+@Neutral800: #151E3A; //#3A4569
+@Neutral840: #0A102D; //#3A4569
+@Neutral900: #030625; //#1F273F
+
+@neutralOffsetBottom: linear-gradient(
+  360deg,
+  #fff 15%,
+  rgba(255, 255, 255, 0) 100%
+);
+@neutralOffsetTop: linear-gradient(
+  360deg,
+  #fff 15%,
+  rgba(255, 255, 255, 0) 100%
+);
+
+@bottomOffsetWhite: linear-gradient(360deg, #FFFFFF 15.22%, rgba(255, 255, 255, 0) 85.94%);
+@bottomOffsetWhiteOther: linear-gradient(360deg, #FFFFFF 65.22%, rgba(255, 255, 255, 0) 95.94%);
+@bottomOffsetDark: linear-gradient(360deg, #030625 15.22%, rgba(13, 26, 47, 0) 85.94%);
+@bottomOffsetDarkOther: linear-gradient(360deg, #030625 65.22%, rgba(13, 26, 47, 0) 95.94%);
+
+/* ----  Blue -------*/
+@blueLight: #F2F6FF;
+@bluePrimary: #225AEA;
+@blueDepressed: #1448CB;
+@blueDeep: #072F94;
+@blueDark: #000E58;
+
+@blue: @bluePrimary; //#237cfb;
+@blue100: @blueLight; //#f7faff;
+@blue200: @blueLight; //#bbd7ff;
+@blue300: @blueLight; //#73acfd;
+@blue400: @bluePrimary; //#225AEA;
+@blue500: @bluePrimary; //#237cfb;
+@blue600: @blueDepressed; //#0856c6;
+@blue700: @blueDeep; //#063d8c;
+@blue800: @blueDark; //#0b2953;
+@blue900: @blueDark; //#0f2543;
+@blueDropShadow: -20px 20px 55px rgba(13, 77, 167, 0.2);
+@blueDropShadowDark: 0px 8px 40px rgba(34, 90, 234, 0.1);
+@blueDropShadow1: -20px 10px 35px rgba(13, 77, 167, 0.2);
+@blue_light: rgba(29, 121, 251, 0.15);
+
+/* ----  Red -------*/
+@redLight: #FFF4F4;
+@redPrimary: #D71313;
+@redDepressed: #9E1414;
+@redDeep: #700606;
+@redDark: #260000;
+
+@red100: @redLight; //#fff8f7;
+@red200: @redLight; //#ffc3bf;
+@red300: @redLight; //#ff9b94;
+@red400: @redPrimary; //#ff736a;
+@red500: @redPrimary; //#ff4b40;
+@red600: @redDepressed; //#c63a31;
+@red700: @redDeep; //#8d2923;
+@red800: @redDark; //#551915;
+@red900: @redDark; //#411916;
+@redDropShadow: -20px 20px 50px rgba(221, 54, 42, 0.12);
+@redDropShadow1: -20px 10px 35px rgba(221, 54, 42, 0.12);
+
+/* ----  Pink -------*/
+@pink100: #fff9fc;
+@pink200: #ffdeee;
+@pink400: #ffaed5;
+@pink500: #ff83bf;
+@pink600: #ca5d9e;
+@pink700: #974680;
+@pink800: #652e5a;
+@pink900: #482641;
+@pinkDropShadow: -20px 20px 50px rgba(255, 131, 191, 0.21);
+@pinkDropShadow1: -20px 10px 35px rgba(255, 131, 191, 0.21);
+
+/* ----  Green -------*/
+@greenLight: #E7FFF1;
+@greenPrimary: #16895A;
+@greenDepressed: #096F45;
+@greenDeep: #06492A;
+@greenDark: #001D10;
+
+@green: #1ae784;
+@green100: @greenLight; //#f2fff9;
+@green200: @greenLight; //#b8ffdd;
+@green300: @greenLight; //#7dfabe;
+@green400: @greenPrimary; //#61f2ac;
+@green500: @greenPrimary; //#1ae784;
+@green600: @greenDepressed; //#0c9955;
+@green700: @greenDeep; //#146b41;
+@green800: @greenDark; //#084d2c;
+@green900: @greenDark; //#0e3c26;
+@greenDropShadow: -20px 20px 55px rgba(26, 231, 132, 0.2);
+@greenDropShadow1: -20px 10px 35px rgba(26, 231, 132, 0.2);
+
+/* ----  Purple -------*/
+@purpleLight: #F6F0FF;
+@purplePrimary: #661AC6;
+@purpleDepressed: #460D90;
+@purpleDeep: #2F0566;
+@purpleDark: #1A003C;
+
+@purple100: @purpleLight; //#fbf8ff;
+@purple200: @purpleLight; //#ead4ff;
+@purple300: @purpleLight; //#d1a7fa;
+@purple400: @purplePrimary; //#b26ef5;
+@purple500: @purplePrimary; //#9b41f5;
+@purple600: @purpleDepressed; //#7325bf;
+@purple700: @purpleDeep; //#551e8c;
+@purple800: @purpleDark; //#49256d;
+@purple900: @purpleDark; //#482641;
+@purpleDropShadow: -20px 20px 55px rgba(155, 65, 245, 0.2);
+@purpleDropShadow: -20px 10px 35px rgba(155, 65, 245, 0.2);
+
+/* ----  Brown -------*/
+@brown100: #fff6ee;
+@brown200: #f1d5ba;
+@brown500: #db9652;
+@brown400: #e2ab75;
+@brown700: #835a31;
+@brown600: #af7842;
+@brown800: #583c21;
+@brown900: #342517;
+@brownDropShadow: -20px 20px 55px rgba(219, 150, 82, 0.2);
+@brownDropShadow1: -20px 10px 35px rgba(219, 150, 82, 0.2);
+
+@purpleDropShadow: -20px 20px 55px rgba(155, 65, 245, 0.2);
+@purpleDropShadow1: -20px 10px 35px rgba(155, 65, 245, 0.2);
+
+/* ----  Yellow -------*/
+@yellowLight: #FFF9E8;
+@yellowPrimary: #F6B60E;
+@yellowDepressed: #A07401;
+@yellowDeep: #5C4406;
+@yellowDark: #211800;
+
+@yellow: #F6B60E;
+@yellow100: @yellowLight; //#fffcf3;
+@yellow200: @yellowLight; //#ffeec2;
+@yellow300: @yellowLight; //#ffe299;
+@yellow400: @yellowPrimary; //#ffd770;
+@yellow500: @yellowPrimary; //#ffcc48;
+@yellow600: @yellowDepressed; //#c69e38;
+@yellow700: @yellowDeep; //#8d7128;
+@yellow800: @yellowDark; //#554418;
+@yellow900: @yellowDark; //#362c13;
+@yellowDropShadow: -20px 20px 50px rgba(186, 145, 36, 0.21);
+@yellowDropShadow1: -20px 10px 35px rgba(186, 145, 36, 0.21);
+
+/* ----  Orange -------*/
+@orangeLight: #FFF5EA;
+@orangePrimary: #DF7009;
+@orangeDepressed: #B55700;
+@orangeDeep: #62240A;
+@orangeDark: #251000;
+
+/* ---- Media ----*/
+@mobile: 768 - 1;
+@screen-768-min: 768;
+
+@desktop: 1920 - 10000;
+@laptop: 1440 - 1919;
+
+@viewport-mobile: e('only screen and (max-width: @{mobile}px)');
+@viewport-768: e('only screen and (min-width: @{screen-768-min}px)');
+
+@viewport-desktop: e('only screen and (min-width: @{desktop}px)');
+@viewport-laptop: e('only screen and (min-width: @{laptop}px)');

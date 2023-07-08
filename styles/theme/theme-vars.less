@@ -1,0 +1,679 @@
+@import '../utils/variables';
+
+/* ==================
+ * COLOUR THEME MIXIN
+ * ================== */
+@library: {
+  @default: {
+    text-color: blue;
+    background-color: darkblue;
+
+    // calendar
+    calendar-point-bgc: @blue500;
+    week-text-color: @blue500;
+    week-past-bgc: @blue100;
+    week-past-hover-bgc: @blue200;
+    week-feature-bgc: @white;
+    week-feature-color: @blue200;
+
+    // drop
+    drop-week-text-color: @blue500;
+    drop-tag-bgc: @blue500;
+    drop-timer-color: @blue500;
+    timer-progress-inner-bgc: @blue500;
+    color-100-to-900: @blue100;
+    color-100-to-950: @blue100;
+  };
+
+  @red: {
+    text-color: red;
+    background-color: darkred;
+
+    // calendar
+    calendar-point-bgc: @red500;
+    week-text-color: @red500;
+    week-past-bgc: @red100;
+    week-past-hover-bgc: @red200;
+    week-feature-bgc: @white;
+    week-feature-color: @red200;
+
+    // drop
+    drop-week-text-color: @red500;
+    drop-tag-bgc: @red500;
+    drop-timer-color: @red500;
+    timer-progress-inner-bgc: @red500;
+    color-100-to-900: @red100;
+  };
+
+  @yellow: {
+    text-color: yellow;
+    background-color: yellowgreen;
+
+    // calendar
+    calendar-point-bgc: @yellow500;
+    week-text-color: @yellow500;
+    week-past-bgc: @yellow100;
+    week-past-hover-bgc: @yellow200;
+    week-feature-bgc: @white;
+    week-feature-color: @yellow200;
+
+    // drop
+    drop-week-text-color: @yellow500;
+    drop-tag-bgc: @yellow500;
+    drop-timer-color: @yellow500;
+    timer-progress-inner-bgc: @yellow500;
+    color-100-to-900: @yellow100;
+  };
+
+  @purple: {
+    text-color: purple;
+    background-color: rebeccapurple;
+
+    // calendar
+    calendar-point-bgc: @purple500;
+    week-text-color: @purple500;
+    week-past-bgc: @purple100;
+    week-past-hover-bgc: @purple200;
+    week-feature-bgc: @white;
+    week-feature-color: @purple200;
+
+    // drop
+    drop-week-text-color: @purple500;
+    drop-tag-bgc: @purple500;
+    drop-timer-color: @purple500;
+    timer-progress-inner-bgc: @purple500;
+    color-100-to-900: @purple100;
+  };
+
+  @pink: {
+    text-color: pink;
+    background-color: deeppink;
+
+    // calendar
+    calendar-point-bgc: @pink500;
+    week-text-color: @pink500;
+    week-past-bgc: @pink100;
+    week-past-hover-bgc: @pink200;
+    week-feature-bgc: @white;
+    week-feature-color: @pink200;
+
+    // drop
+    drop-week-text-color: @pink500;
+    drop-tag-bgc: @pink500;
+    drop-timer-color: @pink500;
+    timer-progress-inner-bgc: @pink500;
+    color-100-to-900: @pink100;
+  };
+
+  @green: {
+    text-color: green;
+    background-color: darkgreen;
+
+    // calendar
+    calendar-point-bgc: @green500;
+    week-text-color: @green500;
+    week-past-bgc: @green100;
+    week-past-hover-bgc: @green200;
+    week-feature-bgc: @white;
+    week-feature-color: @green200;
+
+    // drop
+    drop-week-text-color: @green500;
+    drop-tag-bgc: @green500;
+    drop-timer-color: @green500;
+    timer-progress-inner-bgc: @green500;
+    color-100-to-900: @green100;
+  };
+
+  @brown: {
+    text-color: brown;
+    background-color: saddlebrown;
+
+    // calendar
+    calendar-point-bgc: @brown500;
+    week-text-color: @brown500;
+    week-past-bgc: @brown100;
+    week-past-hover-bgc: @brown200;
+    week-feature-bgc: @white;
+    week-feature-color: @brown200;
+
+    // drop
+    drop-week-text-color: @brown500;
+    drop-tag-bgc: @brown500;
+    drop-timer-color: @brown500;
+    timer-progress-inner-bgc: @brown500;
+    color-100-to-900: @brown100;
+  };
+
+  @dark: {
+    color-white-to-dark: @dark;
+    color-dark-to-white: @white;
+    defatult-border-color: @Neutral800; //@blue900;
+
+    fill-color: @blue600;
+    menu-fill: @Neutral200;
+
+    // theme-switcher
+    theme-switcher-text-color-default: @blue600;
+    theme-switcher-text-color-active: @white;
+    theme-switcher-border-color: @blue700;
+
+    //user
+    user-background-color: @background;
+
+    //notifications
+    notif-background-color: @background;
+    notif-border-color: @blue900;
+    notif-gradient-bottom: @darkOffsetBottom;
+    notif-gradient-top: @darkOffsetTop;
+    notif-header-text: @Neutral200;
+    notif-fill-color: @Neutral100;
+
+    notif-empty-text-color: @blue700;
+    notif-empty-icon-color: @blue700;
+
+    notif-item-text-color: @Neutral200;
+    notif-item-time-text-color: @Neutral800;
+    notif-item-border-color: @blue900;
+
+    //scroll
+    scroll-track-backgound: @blueDark;
+    scroll-thumb-backgound: @bluePrimary;
+
+    //sidebar
+    sidebar-link-bgc: @blue900;
+    sidebar-link: @Neutral500;
+    sidebar-link-active: @blue500;
+    sidebar-fill-outline: @Neutral500;
+    sidebar-fill-bold: @blue500;
+
+    sidebar-sticky-bgc: @background;
+    sidebar-sticky-brc: @blue900;
+
+    //tab
+    tab-text-bgc: @blue900;
+    tab-text-color: @Neutral700;
+
+    // tab no active
+    tab-no-active-bgc: @blue800;
+    tab-no-active-brc: @blue700;
+    tab-no-active-text-color: @Neutral700;
+
+    //tab-random-bgc: @blue900;
+    tab-red-bgc: @red900;
+    tab-yellow-bgc: @yellow900;
+    tab-pink-bgc: @pink900;
+    tab-purple-bgc: @purple900;
+    tab-green-bgc: @green900;
+    tab-brown-bgc: @brown900;
+
+    tab-red-brc: @red700;
+    tab-yellow-brc: @yellow700;
+    tab-pink-brc: @pink700;
+    tab-purple-brc: @purple700;
+    tab-green-brc: @green700;
+    tab-brown-brc: @brown700;
+
+    tab-bgc: @dark;
+
+    //category
+    category-text-color: @Neutral200;
+
+    //button
+    button-bgc: @blue500;
+
+    //calendar
+    calendar-text-color: @Neutral200;
+    week-text-color: @Neutral200;
+    week-day-color: @Neutral200;
+    week-id-color: @Neutral600;
+    week-tag-bgc: @dark;
+
+    //drop
+    timer-divider-bgc: @Neutral800;
+    timer-progress-bgc: @Neutral800;
+    drop-text-color: @Neutral400;
+    drop-week-text-color: @Neutral200;
+    drop-summary-text: @Neutral200;
+    drop-shadow: @blueDropShadowDark;
+
+    //countdown
+    days-countdown: -webkit-linear-gradient(90deg, #D94E0F, #C6470E);
+    hours-countdown: -webkit-linear-gradient(90deg, #C84327, #CF5B44);
+    minutes-countdown: -webkit-linear-gradient(90deg, #C82728, #CF494B);
+    seconds-countdown: -webkit-linear-gradient(90deg, #2A62CA, #2863C7);
+
+    skeleton-bg: linear-gradient(90deg, @blue900 20%, @dark 37%, @blue900 63%);
+
+    skeleton-red: linear-gradient(90deg, @red500 20%, @red200 37%, @red500 63%);
+    skeleton-blue: linear-gradient(
+      90deg,
+      @blue500 20%,
+      @blue200 37%,
+      @blue500 63%
+    );
+
+    scroll-gradient-top: linear-gradient(@dark, rgba(13, 26, 47, 0.25));
+    scroll-gradient-bottom: linear-gradient(rgba(13, 26, 47, 0.25), @dark);
+
+    mobile-navigation-gradient: linear-gradient(180deg, rgba(13, 26, 47, 0), @dark);
+    locked-gradient: linear-gradient(360deg, @dark 0%, rgba(13, 26, 47, 0) 102.78%);
+
+    black-to-white: #ffffff;
+    white-to-black: #000000;
+    white-to-blue-900: @blue900;
+
+    neutral-500: @Neutral500;
+
+    neutral-100-to-700: @Neutral700;
+    neutral-100-to-800: @Neutral800;
+    neutral-140-to-840: @Neutral840;
+    neutral-100-to-900: @Neutral900;
+    neutral-200-to-400: @Neutral400;
+    neutral-200-to-500: @Neutral500;
+    neutral-200-to-700: @Neutral700;
+    neutral-200-to-800: @Neutral800;
+    neutral-200-to-900: @Neutral900;
+    neutral-300-to-500: @Neutral500;
+    neutral-300-to-600: @Neutral600;
+    neutral-300-to-700: @Neutral700;
+    neutral-300-to-800: @Neutral800;
+    neutral-400-to-500: @Neutral500;
+    neutral-400-to-600: @Neutral600;
+    neutral-500-to-200: @Neutral200;
+    neutral-500-to-100: @Neutral100;
+    neutral-500-to-400: @Neutral400;
+    neutral-500-to-600: @Neutral600;
+    neutral-500-to-800: @Neutral800;
+    neutral-700-to-200: @Neutral200;
+    neutral-800-to-200: @Neutral200;
+    neutral-800-to-300: @Neutral300;
+    neutral-800-to-500: @Neutral500;
+    neutral-800-to-600: @Neutral600;
+    neutral-800-to-700: @Neutral700;
+    neutral-900-to-200: @Neutral200;
+
+    neutral-100-to-blue-800: @blue800;
+    neutral-100-to-blue-700: @blue700;
+    neutral-100-to-blue-900: @blue900;
+    neutral-100-to-blue-500: @blue500;
+    neutral-200-to-blue-600: @blue600;
+    neutral-200-to-blue-700: @blue700;
+    neutral-200-to-blue-800: @blue800;
+    neutral-200-to-blue-900: @blue900;
+    neutral-300-to-blue-700: @blue700;
+    neutral-300-to-blue-500: @blue500;
+    neutral-300-to-blue-800: @blue800;
+    neutral-300-to-blue-600: @blue600;
+    neutral-400-to-blue-600: @blue600;
+    neutral-400-to-blue-700: @blue700;
+    neutral-500-to-blue-600: @blue600;
+    neutral-500-to-blue-700: @blue700;
+    neutral-800-to-blue-500: @blue500;
+    neutral-800-to-blue-600: @blue600;
+
+    neutral-100-to-red-900: @red900;
+    neutral-500-to-red-600: @red600;
+    neutral-100-to-yellow-900: @yellow900;
+    neutral-500-to-yellow-600: @yellow600;
+    neutral-100-to-pink-900: @pink900;
+    neutral-500-to-pink-600: @pink600;
+
+    neutral-800-to-white: @white;
+    blue-500-to-white: @white;
+
+    blue-100-to-dark: @dark;
+    blue-200-to-neutral-800: @Neutral800;
+
+    blue-100-to-900: @blue900;
+    blue-100-to-neutral-900: @Neutral900;
+    red-100-to-900: @red900;
+    yellow-100-to-900: @yellow900;
+    pink-100-to-900: @pink900;
+    green-100-to-900: @green900;
+    purple-100-to-900: @purple900;
+    brown-100-to-900: @brown900;
+
+    blue-200-to-600: @blue600;
+    red-200-to-600: @red600;
+    yellow-200-to-600: @yellow600;
+    pink-200-to-600: @pink600;
+    green-200-to-600: @green600;
+    purple-200-to-600: @purple600;
+    brown-200-to-600: @brown600;
+
+    blue-200-to-700: @blue700;
+    blue-200-to-800: @blue800;
+    blue-500-to-400: @blue400;
+
+    red-200-to-700: @red700;
+    red-200-to-800: @red800;
+    yellow-200-to-700: @yellow700;
+    yellow-200-to-800: @yellow800;
+    pink-200-to-700: @pink700;
+    green-200-to-700: @green700;
+    green-200-to-800: @green800;
+    purple-200-to-700: @purple700;
+    purple-200-to-800: @purple800;
+    brown-200-to-700: @brown700;
+
+    bottom-gradient: @bottomOffsetDarkOther;
+
+    //tooltip
+    neutral-800-to-900: @Neutral900;
+
+    image-gallery-gradient-left: linear-gradient(90deg, #0D1A2F 0%, rgba(13, 26, 47, 0) 98.44%);
+    image-gallery-gradient-right: linear-gradient(270deg, #0D1A2F 0%, rgba(13, 26, 47, 0) 98.44%);
+  };
+
+  @light: {
+    color-white-to-dark: @white;
+    color-dark-to-white: @dark;
+    defatult-border-color: @Neutral100;
+
+    fill-color: @Neutral500;
+    menu-fill: @Neutral800;
+
+    // theme-switcher
+    theme-switcher-text-color-default: @Neutral500;
+    theme-switcher-text-color-active: @white;
+    theme-switcher-border-color: @Neutral100;
+
+    //user
+    user-background-color: @white;
+
+    //notifications
+    notif-background-color: @white;
+    notif-border-color: @Neutral100;
+    notif-gradient-bottom: @neutralOffsetBottom;
+    notif-gradient-top: @neutralOffsetTop;
+    notif-header-text: @Neutral800;
+    notif-fill-color: @Neutral500;
+    notif-empty-text-color: @Neutral400;
+    notif-empty-icon-color: @Neutral400;
+
+    notif-item-text-color: @Neutral800;
+    notif-item-time-text-color: @Neutral300;
+    notif-item-border-color: @Neutral100;
+
+    //scroll
+    scroll-track-backgound: @blueLight;
+    scroll-thumb-backgound: @bluePrimary;
+
+    //sidebar
+    sidebar-fill-outline: @Neutral500;
+    sidebar-fill-bold: @blue500;
+    sidebar-link-bgc: @blue100;
+    sidebar-link: @Neutral500;
+    sidebar-link-active: @blue500;
+    sidebar-sticky-bgc: @white;
+    sidebar-sticky-brc: @Neutral100;
+
+    //tab
+    tab-text-bgc: @Neutral100;
+    tab-text-color: @Neutral300;
+    tab-bgc: @white;
+
+    // tab no active
+    tab-no-active-bgc: @Neutral100;
+    tab-no-active-brc: @Neutral100;
+    tab-no-active-text-color: @Neutral300;
+
+    //tab-random-bgc: @blue900;
+    tab-red-bgc: @red100;
+    tab-yellow-bgc: @yellow100;
+    tab-pink-bgc: @pink100;
+    tab-purple-bgc: @purple100;
+    tab-green-bgc: @green100;
+    tab-brown-bgc: @brown100;
+
+    tab-red-brc: @red200;
+    tab-yellow-brc: @yellow200;
+    tab-pink-brc: @pink200;
+    tab-purple-brc: @purple200;
+    tab-green-brc: @green200;
+    tab-brown-brc: @brown200;
+
+    //category
+    category-text-color: @Neutral800;
+
+    //button
+    button-bgc: @blue500;
+
+    //calendar
+    calendar-text-color: @Neutral800;
+    week-text-color: @Neutral800;
+    week-day-color: @Neutral500;
+    week-id-color: @Neutral300;
+    week-tag-bgc: @white;
+
+    //drop
+    timer-divider-bgc: @Neutral100;
+    timer-progress-bgc: @Neutral100;
+    drop-text-color: @Neutral400;
+    drop-week-text-color: @Neutral800;
+    drop-summary-text: @Neutral800;
+    drop-shadow: @blueDropShadow;
+
+    //countdown
+    days-countdown: -webkit-linear-gradient(90deg, #FFBF1C, #FFCE19);
+    hours-countdown: -webkit-linear-gradient(90deg, #C84327, #CF5B44);
+    minutes-countdown: -webkit-linear-gradient(90deg, #F45051, #FF391B);
+    seconds-countdown: -webkit-linear-gradient(90deg, #5179E5, #177FFF);
+
+    skeleton-bg: linear-gradient(
+      90deg,
+      @Neutral100 20%,
+      @white 37%,
+      @Neutral100 63%
+    );
+
+    skeleton-red: linear-gradient(90deg, @red500 20%, @red200 37%, @red500 63%);
+    skeleton-blue: linear-gradient(
+      90deg,
+      @blue500 20%,
+      @blue200 37%,
+      @blue500 63%
+    );
+
+    scroll-gradient-top: linear-gradient(@white, rgba(255, 255, 255, 0.25));
+    scroll-gradient-bottom: linear-gradient(rgba(255, 255, 255, 0.25), @white);
+    locked-gradient: linear-gradient(360deg, @white 0%, rgba(255, 255, 255, 0) 102.78%);
+
+    mobile-navigation-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0), @white);
+
+    black-to-white: #000000;
+    white-to-black: #ffffff;
+    white-to-blue-900: #ffffff;
+
+    neutral-500: @Neutral500;
+
+    neutral-100-to-700: @Neutral100;
+    neutral-100-to-800: @Neutral100;
+    neutral-140-to-840: @Neutral140;
+    neutral-100-to-900: @Neutral100;
+    neutral-200-to-400: @Neutral200;
+    neutral-200-to-500: @Neutral200;
+    neutral-200-to-700: @Neutral200;
+    neutral-200-to-800: @Neutral200;
+    neutral-200-to-900: @Neutral200;
+    neutral-300-to-500: @Neutral300;
+    neutral-300-to-600: @Neutral300;
+    neutral-300-to-700: @Neutral300;
+    neutral-300-to-800: @Neutral300;
+    neutral-400-to-500: @Neutral400;
+    neutral-400-to-600: @Neutral400;
+    neutral-500-to-200: @Neutral500;
+    neutral-500-to-100: @Neutral500;
+    neutral-500-to-400: @Neutral500;
+    neutral-500-to-600: @Neutral500;
+    neutral-500-to-800: @Neutral500;
+    neutral-700-to-200: @Neutral700;
+    neutral-800-to-200: @Neutral800;
+    neutral-800-to-300: @Neutral800;
+    neutral-800-to-500: @Neutral800;
+    neutral-800-to-600: @Neutral800;
+    neutral-800-to-700: @Neutral800;
+    neutral-900-to-200: @Neutral900;
+
+    neutral-100-to-blue-800: @Neutral100;
+    neutral-100-to-blue-700: @Neutral100;
+    neutral-100-to-blue-900: @Neutral100;
+    neutral-100-to-blue-950: @Neutral100;
+    neutral-100-to-blue-500: @Neutral100;
+    neutral-200-to-blue-600: @Neutral200;
+    neutral-200-to-blue-800: @Neutral200;
+    neutral-200-to-blue-900: @Neutral200;
+    neutral-200-to-blue-700: @Neutral200;
+    neutral-300-to-blue-600: @Neutral300;
+    neutral-300-to-blue-500: @Neutral300;
+    neutral-300-to-blue-700: @Neutral300;
+    neutral-300-to-blue-800: @Neutral300;
+    neutral-400-to-blue-600: @Neutral400;
+    neutral-400-to-blue-700: @Neutral400;
+    neutral-500-to-blue-600: @Neutral500;
+    neutral-500-to-blue-700: @Neutral500;
+    neutral-800-to-blue-500: @Neutral800;
+    neutral-800-to-blue-600: @Neutral800;
+
+    neutral-100-to-red-900: @Neutral100;
+    neutral-500-to-red-600: @Neutral500;
+    neutral-100-to-yellow-900: @Neutral100;
+    neutral-500-to-yellow-600: @Neutral500;
+    neutral-100-to-pink-900: @Neutral100;
+    neutral-500-to-pink-600: @Neutral500;
+
+    neutral-800-to-white: @Neutral800;
+    blue-500-to-white: @blue500;
+
+    blue-100-to-dark: @blue100;
+    blue-200-to-neutral-800: @blue200;
+
+    blue-100-to-900: @blue100;
+    blue-100-to-neutral-900: @blue100;
+    blue-100-to-950: @blue100;
+    red-100-to-900: @red100;
+    yellow-100-to-900: @yellow100;
+    pink-100-to-900: @pink100;
+    green-100-to-900: @green100;
+    purple-100-to-900: @purple100;
+    brown-100-to-900: @brown100;
+
+    blue-200-to-600: @blue200;
+    red-200-to-600: @red200;
+    yellow-200-to-600: @yellow200;
+    pink-200-to-600: @pink200;
+    green-200-to-600: @green200;
+    purple-200-to-600: @purple200;
+    brown-200-to-600: @brown200;
+
+    blue-200-to-700: @blue200;
+    blue-200-to-800: @blue200;
+    blue-500-to-400: @blue500;
+
+    red-200-to-700: @red200;
+    red-200-to-800: @red200;
+    yellow-200-to-700: @yellow200;
+    yellow-200-to-800: @yellow200;
+    pink-200-to-700: @pink200;
+    green-200-to-700: @green200;
+    green-200-to-800: @green200;
+    purple-200-to-700: @purple200;
+    purple-200-to-800: @purple200;
+    brown-200-to-700: @brown200;
+    bottom-gradient: @bottomOffsetWhiteOther;
+
+    //tooltip
+    neutral-800-to-900: @Neutral800;
+
+    image-gallery-gradient-left: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 98.44%);
+    image-gallery-gradient-right: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 98.44%);
+  };
+};
+
+@libraryDark: {
+  @default: {
+    // calendar
+    week-past-bgc: @blue900;
+    week-past-hover-bgc: @blue800;
+    week-past-brc: @blue500;
+    week-feature-bgc: @dark;
+    //week-feature-brc: @blue800;
+    week-feature-brc: @blueDeep;
+    week-tag-bgc: @dark;
+    color-100-to-900: @blue900;
+    color-100-to-800: @blue800;
+  };
+
+  @red: {
+    // calendar
+    week-past-bgc: @red900;
+    week-past-hover-bgc: @red800;
+    week-past-brc: @red600;
+    week-feature-bgc: @dark;
+    week-feature-brc: @red800;
+    week-tag-bgc: @dark;
+    color-100-to-900: @red900;
+    color-100-to-800: @red800;
+  };
+
+  @yellow: {
+    // calendar
+    week-past-bgc: @yellow900;
+    week-past-hover-bgc: @yellow800;
+    week-past-brc: @yellow600;
+    week-feature-bgc: @dark;
+    week-feature-brc: @yellow800;
+    week-tag-bgc: @dark;
+    color-100-to-900: @yellow900;
+    color-100-to-800: @yellow800;
+  };
+
+  @purple: {
+    // calendar
+    week-past-bgc: @purple900;
+    week-past-hover-bgc: @purple800;
+    week-past-brc: @purple600;
+    week-feature-bgc: @dark;
+    week-feature-brc: @purple800;
+    week-tag-bgc: @dark;
+    color-100-to-900: @purple900;
+    color-100-to-800: @purple800;
+  };
+
+  @pink: {
+    // calendar
+    week-past-bgc: @pink900;
+    week-past-hover-bgc: @pink800;
+    week-past-brc: @pink600;
+    week-feature-bgc: @dark;
+    week-feature-brc: @pink800;
+    week-tag-bgc: @dark;
+    color-100-to-900: @pink900;
+    color-100-to-800: @pink800;
+  };
+
+  @green: {
+    // calendar
+    week-past-bgc: @green900;
+    week-past-hover-bgc: @green800;
+    week-past-brc: @green600;
+    week-feature-bgc: @dark;
+    week-feature-brc: @green800;
+    week-tag-bgc: @dark;
+    color-100-to-900: @green900;
+    color-100-to-800: @green800;
+  };
+
+  @brown: {
+    // calendar
+    week-past-bgc: @brown900;
+    week-past-hover-bgc: @brown800;
+    week-past-brc: @brown600;
+    week-feature-bgc: @dark;
+    week-feature-brc: @brown800;
+    week-tag-bgc: @dark;
+    color-100-to-900: @brown900;
+    color-100-to-800: @brown800;
+  };
+};

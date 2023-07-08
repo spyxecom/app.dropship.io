@@ -1,0 +1,90 @@
+@import '../../styles/utils/variables';
+/* Function for getting colors from list
+if we need quantity of colors more than colors in array  */
+/* Function for painting matrix with box-shadow */
+/* Main stuff */
+
+.box-with-text {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  /* Hack to hide thin transparent lines while resize objects */
+
+  > h2 {
+    position: relative;
+    display: block;
+    background: #FFFFFF;
+    color: #000000;
+    mix-blend-mode: lighten;
+  }
+}
+
+.box-with-text:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0vmax 0vmax 10vmax 10vmax @blue500,
+  15vmax 0vmax 10vmax 10vmax violet,
+  30vmax 0vmax 10vmax 10vmax teal,
+  45vmax 0vmax 10vmax 10vmax @blue200,
+  60vmax 0vmax 10vmax 10vmax yellow,
+  75vmax 0vmax 10vmax 10vmax @blue100,
+  90vmax 0vmax 10vmax 10vmax yellowgreen,
+  105vmax 0vmax 10vmax 10vmax orange,
+  120vmax 0vmax 10vmax 10vmax darkturquoise,
+  135vmax 0vmax 10vmax 10vmax @blue500;
+  animation: shadows-cells 2.5s linear infinite;
+}
+
+.box-with-text:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  left: -2px;
+  display: block;
+  border: 4px solid #FFFFFF;
+}
+
+@keyframes shadows-cells {
+  25% {
+    box-shadow: 0 0 10vmax 10vmax coral,
+    15vmax 0 10vmax 10vmax skyblue,
+    30vmax 0 10vmax 10vmax darkviolet,
+    45vmax 0 10vmax 10vmax gold,
+    60vmax 0 10vmax 10vmax purple,
+    75vmax 0 10vmax 10vmax violet,
+    90vmax 0 10vmax 10vmax teal,
+    105vmax 0 10vmax 10vmax orangered,
+    120vmax 0 10vmax 10vmax yellow,
+    135vmax 0 10vmax 10vmax crimson;
+  }
+  45% {
+    box-shadow: 0 0 10vmax 10vmax yellowgreen,
+    15vmax 0 10vmax 10vmax orange,
+    30vmax 0 10vmax 10vmax darkturquoise,
+    45vmax 0 10vmax 10vmax pink,
+    60vmax 0 10vmax 10vmax steelblue,
+    75vmax 0 10vmax 10vmax turquoise,
+    90vmax 0 10vmax 10vmax coral,
+    105vmax 0 10vmax 10vmax skyblue,
+    120vmax 0 10vmax 10vmax darkviolet,
+    135vmax 0 10vmax 10vmax gold;
+  }
+  75% {
+    box-shadow: 0 0 10vmax 10vmax teal,
+    15vmax 0 10vmax 10vmax orangered,
+    30vmax 0 10vmax 10vmax yellow,
+    45vmax 0 10vmax 10vmax crimson,
+    60vmax 0 10vmax 10vmax yellowgreen,
+    75vmax 0 10vmax 10vmax orange,
+    90vmax 0 10vmax 10vmax darkturquoise,
+    105vmax 0 10vmax 10vmax pink,
+    120vmax 0 10vmax 10vmax steelblue,
+    135vmax 0 10vmax 10vmax turquoise;
+  }
+}
+
+@primary-color: #225aea;@link-color: #225aea;@success-color: #16895A;@warning-color: #F6B60E;@error-color: #D71313;@font-size-base: 14px;@heading-color: #151E3A;@text-color: #6E7DAE;@text-color-secondary: #C5CCE3;@disabled-bg: #F3F3F3;@border-radius-base: 6px;@border-color-base: #F2F3F8;@box-shadow-base: none;@icon-color: @primary-color;@icon-color-hover: fade(@primary-color, 75%);@input-placeholder-color: #C5CCE3;@select-dropdown-font-size: 14px;@slider-track-background-color: @primary-color;@slider-track-background-color-hover: fade(@primary-color, 75%);@slider-handle-color: @primary-color;@slider-handle-color-hover: fade(@primary-color, 75%);@slider-handle-background-color: #FFFFFF;@slider-dot-border-color: #FFFFFF;@slider-dot-border-color-active: #FFFFFF;@menu-collapsed-width: 72px;@layout-body-background: #ffffff;@layout-header-background: #272741;@tooltip-max-width: 206px;@tooltip-bg: #151E3A;@tooltip-arrow-width: 11px;@tooltip-distance: @tooltip-arrow-width - 4px;@modal-mask-bg: fade(#072F94, 30%);

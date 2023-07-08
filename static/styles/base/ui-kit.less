@@ -1,0 +1,242 @@
+@import '../utils/variables';
+@import '../theme/theme';
+@import 'animation';
+
+/* ----------- Typography -----------*/
+.header-x-large-text {
+  font-family: @fontFamily;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -1px;
+}
+
+.heading-large-text {
+  font-family: @fontFamily;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  letter-spacing: -0.69px;
+}
+
+.heading-medium-text {
+  font-family: @fontFamily;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: -0.53px;
+}
+
+.heading-small-text {
+  font-family: @fontFamily;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 32px;
+  /* identical to box height, or 145% */
+
+  letter-spacing: -0.4px;
+}
+
+.body-bold-text {
+  font-family: @fontFamily;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  letter-spacing: -0.18px;
+}
+
+.body-text {
+  font-family: @fontFamily;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  letter-spacing: -0.18px;
+}
+
+.sub-heading-text {
+  font-family: @fontFamily;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  letter-spacing: -0.09px;
+  text-transform: uppercase;
+}
+
+.button-text {
+  font-family: @fontFamily;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+
+  letter-spacing: -0.09px;
+}
+
+.caption-text {
+  font-family: @fontFamily;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+}
+
+.caption-small-text {
+  font-family: @fontFamily;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  /* identical to box height, or 120% */
+}
+
+.mini-text {
+  font-family: @fontFamily;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 12px;
+  /* or 150% */
+
+  letter-spacing: 0.01px;
+}
+
+.drop-shadow {
+  .with-theme({
+    box-shadow: @vars[drop-shadow];
+  });
+}
+
+.border {
+  .with-theme({
+    border: 1px solid @vars[defatult-border-color];
+  });
+}
+
+.border-radius {
+  border-radius: @border-radius;
+}
+
+
+.no-scroll-bar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.custom-scroll-bar{
+  &::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 2px;
+  }
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+  &::-webkit-scrollbar-track-piece {
+    border-radius: 2px;
+    .with-theme({
+      background: 1px solid @vars[color-white-to-dark];
+    });
+  }
+  &::-webkit-scrollbar-thumb {
+    background: @blue500;
+    border-radius: 2px;
+  }
+}
+
+.responsive-square-block{
+  position: relative;
+  width: 100%;
+  &:after{
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+  }
+}
+
+
+/* ----------- Buttons -----------*/
+.btn-x-large {
+  .trans();
+  display: inline-block;
+  max-width: 324px;
+  width: 100%;
+  height: 48px;
+  color: @white;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  background-color: @blue500;
+  .button-text();
+  .border-radius();
+
+  @media @viewport-mobile {
+    height: 72px;
+  }
+}
+
+/* ----------- Buttons -----------*/
+.flex-row-space-between {
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: space-between;
+}
+
+.flex-row-stretch {
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: stretch;
+}
+
+.skeleton-animation-bg {
+  .with-theme({
+    background-image: @vars[skeleton-bg];
+  });
+  background-size: 400% 100%;
+  animation: ant-skeleton-loading 1.4s ease infinite;
+}
+
+.skeleton-animation-red {
+  .with-theme({
+    background-image: @vars[skeleton-red];
+  });
+  background-size: 400% 100%;
+  animation: ant-skeleton-loading 1.4s ease infinite;
+}
+
+.skeleton-animation-blue {
+  .with-theme({
+    background-image: @vars[skeleton-blue];
+  });
+  background-size: 400% 100%;
+  animation: ant-skeleton-loading 1.4s ease infinite;
+}
+
+.ant-message {
+  .ant-message-notice {
+    .ant-message-notice-content {
+      .ant-message-error {
+        .anticon {
+          top: -2px !important;
+        }
+      }
+    }
+  }
+}
